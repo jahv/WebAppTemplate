@@ -3,13 +3,17 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>jahv.selfstudy</groupId>
 	<artifactId>WebAppTemplate</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>3</version>
 	<packaging>war</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.7</java.version>
+		
+<!-- 		<spring.version>3.2.15.RELEASE</spring.version> -->
 	</properties>
+	
+	
 
 	<build>
 		<plugins>
@@ -18,7 +22,6 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.2</version>
 				<configuration>
-					<generatedSourcesDirectory>src/main/generated</generatedSourcesDirectory>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
 					<encoding>${project.build.sourceEncoding}</encoding>
@@ -28,9 +31,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.6</version>
-				<configuration>
-					<webappDirectory>/src/webapp</webappDirectory>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
