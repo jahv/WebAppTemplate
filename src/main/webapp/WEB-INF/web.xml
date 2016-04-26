@@ -7,6 +7,14 @@
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
+	
+	<listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:META-INF/spring/jdbc-applicationContext.xml</param-value>
+	</context-param>
 
 	<servlet>
 		<servlet-name>spring-mvc</servlet-name>
@@ -15,6 +23,7 @@
 			<param-name>contextConfigLocation</param-name>
 			<param-value>WEB-INF/spring/webmvc-config.xml</param-value>
 		</init-param>
+		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>spring-mvc</servlet-name>
