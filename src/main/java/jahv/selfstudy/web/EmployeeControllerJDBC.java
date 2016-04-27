@@ -3,6 +3,7 @@ package jahv.selfstudy.web;
 import jahv.selfstudy.model.EmployeeDTO;
 import jahv.selfstudy.service.EmployeeServiceJDBC;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -28,8 +29,9 @@ public class EmployeeControllerJDBC {
 
 	@RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public List<EmployeeDTO> getEmployees() {
+	public List<EmployeeDTO> getEmployees(final Principal principal) {
 		LOGGER.info("[UI] - Getting all employees");
+		LOGGER.info("User: " + principal.getName());
 		return employeeServiceJDBC.getEmployees();
 	}
 

@@ -7,6 +7,8 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		
 		<class>jahv.selfstudy.model.EmployeeEntity</class>
+		<class>jahv.selfstudy.model.UserEntity</class>
+		<class>jahv.selfstudy.model.UserRolesEntity</class>
 		
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>
