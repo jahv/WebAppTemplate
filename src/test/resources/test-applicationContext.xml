@@ -13,4 +13,6 @@
 
 	<bean id="testRestTemplate" name="testRestTemplate" class="org.springframework.web.client.RestTemplate" />
 	
+	<bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+			p:prefix="/WEB-INF/views/" p:suffix=".jsp"/>
 </beans>

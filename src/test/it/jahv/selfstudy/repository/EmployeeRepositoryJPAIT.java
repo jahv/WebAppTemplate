@@ -1,5 +1,7 @@
 package jahv.selfstudy.repository;
 
+import jahv.selfstudy.model.EmployeeEntity;
+
 import java.util.List;
 
 import org.junit.Assert;
@@ -9,9 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 
-import jahv.selfstudy.model.EmployeeEntity;
-
-@ContextConfiguration(locations = "classpath*:META-INF/spring/jdbc-applicationContext.xml")
+@ContextConfiguration(locations = { "classpath*:META-INF/spring/jdbc-applicationContext.xml" })
 @TransactionConfiguration(defaultRollback = true)
 public class EmployeeRepositoryJPAIT extends AbstractTransactionalJUnit4SpringContextTests {
 
