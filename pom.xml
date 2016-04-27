@@ -21,6 +21,7 @@
 		<slf4j.version>1.7.12</slf4j.version>
 		<spring.version>3.2.15.RELEASE</spring.version>
 		<spring.data.version>1.6.5.RELEASE</spring.data.version>
+		<spring.data.commons.version>1.8.5.RELEASE</spring.data.commons.version>
 	</properties>
 
 	<dependencies>
@@ -45,6 +46,12 @@
 			<artifactId>spring-data-jpa</artifactId>
 			<version>${spring.data.version}</version>
 		</dependency>
+		<dependency>
+	<groupId>org.springframework.data</groupId>
+	<artifactId>spring-data-commons</artifactId>
+	<version>${spring.data.commons.version}</version>
+</dependency>
+		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
